@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改文章 | YoseR1cho的Blog</title>
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/editor.css">
+</head>
+<body>
+<!--    版心-->
+<div class="post_container">
+    <form method="post" action="/patch/<%= data[0]._id %>" class="modify_form" id="<%= data[0]._id %>">
+        <h1 class="post">修改文章</h1>
+        <div class="editor_title">
+            <i>标题：</i>
+            <input type="text" placeholder="输入文章的标题" name="title" value="<%= data[0].title %>">
+        </div>
+        <div class="editor_title">
+            <i>简介：</i>
+            <input type="text" placeholder="输入文章的简介" name="summary" value="<%= data[0].summary %>">
+        </div>
+        <div id="editor—wrapper">
+            <div id="toolbar-container"><!-- 工具栏 --></div>
+            <div id="editor-container"><!-- 编辑器 --></div>
+        </div>
+        <input type="hidden" class="hidden_text" name="text">
+        <input type="button" class="submit" value="发布" onclick="return formSubmit()">
+    </form>
+</div>
+<!--    /版心-->
+<script src="/js/form-serialize.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.0/axios.min.js"></script>
+<script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+<script src="/js/wangEditor.js"></script>
+<script src="/js/modify.js"></script>
+</body>
+</html>

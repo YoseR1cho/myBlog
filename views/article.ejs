@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= item[0].title %> | YoseR1cho的Blog</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div class="total_container">
+    <!-- 侧边栏 -->
+    <aside id="menu">
+        <div class="menu_box ">
+            <div class="wrap">
+                <div class="avatar"></div>
+                <h1><a href="#">myBlog</a></h1>
+                <p>感谢关顾</p>
+                <nav class="main-nav">
+                    <ul>
+                        <li class="home"><a href="/">首页</a></li>
+                        <li class="classify"><a href="/classify">归档</a></li>
+                        <li><a href="/post">发布文章</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </aside>
+    <!-- /侧边栏 -->
+    <!-- 版心 -->
+    <div id="container">
+        <div id="content">
+            <article class="article" id="<%= item[0]._id %>">
+                <div class="post_time"><%= moment(item[0].time).format('YYYY.MM.DD') %></div>
+                <h1 class="title"><%= item[0].title %></h1>
+                <div class="center_content">
+                    <%- item[0].text %>
+                </div>
+            </article>
+        </div>
+    </div>
+    <!-- /版心 -->
+</div>
+</body>
+</html>

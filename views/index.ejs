@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YoseR1cho的Blog</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div class="total_container">
+  <!-- 侧边栏 -->
+  <aside id="menu">
+    <div class="menu_box ">
+      <div class="wrap">
+        <div class="avatar"></div>
+        <h1><a href="#">myBlog</a></h1>
+        <p>感谢关顾</p>
+        <nav class="main-nav">
+          <ul>
+            <li class="home"><a href="/">首页</a></li>
+            <li class="classify"><a href="/classify">归档</a></li>
+            <li><a href="/post">发布文章</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </aside>
+  <!-- /侧边栏 -->
+  <!-- 版心 -->
+  <div id="container">
+    <div id="content">
+      <% articles.forEach(item=>{ %>
+        <article class="article article-b ">
+          <div class="post_time"><%= moment(item.time).format('YYYY.MM.DD') %></div>
+          <h1 class="title"><a href="/article/<%= item._id %>"><%= item.title %></a></h1>
+          <div class="center_content">
+            <p><%= item.summary +'...' %></p>
+            <p id="<%= item._id %>">
+              <a href="/article/<%= item._id %>">继续阅读...</a>
+              <a class="delete" href="/delete/<%= item._id %>" onclick="return deleteConfirm()">删除</a>
+              <a href="/modify/<%= item._id %>" class="revise">编辑</a>
+            </p>
+          </div>
+
+        </article>
+      <% }) %>
+
+    </div>
+  </div>
+  <!-- /版心 -->
+</div>
+
+
+<script src="/js/deleteConfirm.js"></script>
+</body>
+</html>

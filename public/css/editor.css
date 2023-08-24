@@ -1,0 +1,73 @@
+.post_container {
+
+    width: 1500px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    background-color: #fff;
+}
+
+.post_container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.editor_title {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.editor_title i {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.editor_title input {
+    height:25px;
+    width: 977px;
+    outline: none;
+    border-radius: 10px;
+    border:2px solid #ccc;
+}
+
+.post {
+    text-align: center;
+    letter-spacing: .1em;
+    margin:0 auto;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    font-size: 3em;
+    color: #32c2e2;
+    font-weight: 400;
+}
+
+#editor—wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    z-index: 100; /* 按需定义 */
+    width: 70%;
+    margin: 0 auto;
+}
+#toolbar-container { border-bottom: 1px solid #ccc; }
+#editor-container { height: 500px; }
+
+.submit {
+    margin: auto;
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 15px;
+    border:none;
+    cursor: pointer;
+    transition: all .3s;
+    font-size: .9em;
+}
+
+.submit a {
+    color: #000;
+}
+
+.submit:hover {
+    background-color: rgba(50, 194, 226, 0.62);
+}

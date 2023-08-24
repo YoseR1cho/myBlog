@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布文章 | YoseR1cho的Blog</title>
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/editor.css">
+</head>
+<body>
+<!--    版心-->
+<div class="post_container">
+    <form method="post"action="/">
+        <h1 class="post">发布文章</h1>
+        <div class="editor_title">
+            <i>标题：</i>
+            <input type="text" placeholder="输入文章的标题" name="title">
+        </div>
+        <div class="editor_title">
+            <i>简介：</i>
+            <input type="text" placeholder="输入文章的简介" name="summary">
+        </div>
+        <div id="editor—wrapper">
+            <div id="toolbar-container"><!-- 工具栏 --></div>
+            <div id="editor-container"><!-- 编辑器 --></div>
+        </div>
+        <input type="hidden" class="hidden_text" name="text">
+        <input type="button" value="发布" class="submit" onclick="formSubmit()">
+    </form>
+</div>
+<!--    /版心-->
+<script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+<script src="/js/wangEditor.js"></script>
+<script src="/js/post.js"></script>
+</body>
+</html>
